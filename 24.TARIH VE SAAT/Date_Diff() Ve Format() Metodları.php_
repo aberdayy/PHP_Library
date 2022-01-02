@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="tr-TR">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="content-language" content="tr">
+<meta charset="utf-8">
+<title>baslik</title>
+</head>
+<body>
+<?php 
+/*
+daye_diff() :   olusturulmus olan yeni iki farkli  tarih nesnesi arasindaki farki hesaplayarak yeni bir tarih sonuc nesnesi dizi lusturarak olusturdugu dizi degeri geriye dondurur.
+format()    :   date_diff metodu ile hsaplanan iki tarih arasindaki farki belirtilecek olan bir formata gore bicimlendirerek bicimlendirdigi degeri geriye dondurur.
+*/
+/*
+$zamanbir = date_create("1980-12-08");//yil ay gun 
+$zamaniki = date_create("1978-07-05");
+
+$islem = date_diff($zamanbir,$zamaniki);
+
+echo "<pre>";
+print_r($islem);
+echo "</pre>";
+-------------------------*/
+/*
+$zamanbir = date_create("1980-12-08");//yil ay gun 
+$zamaniki = date_create("1978-07-05");
+
+$islem = date_diff($zamanbir,$zamaniki);
+
+$formatla = $islem->format("%y YIL %m AY %d GUN");
+echo "08-12-1980 ile 05-07-1978 tarihleri arasindaki zaman farki : ".$formatla;
+-------------------*/
+/*
+$zamanbir = date_create("1980-12-08");//yil ay gun 
+$zamaniki = date_create("1978-07-05");
+
+$islem = date_diff($zamanbir,$zamaniki);
+
+$formatla = $islem->format("%days"); // HATA : %DAYS DEGERI BU SEKILDE ALINMAZ CUNKU SANKI %D GIBI YAZILMIS KABUL EDILIR SONUNA AYS EKLENIR.
+echo "08-12-1980 ile 05-07-1978 tarihleri arasindaki gun farki : ".$formatla;
+-----------------------------*/
+/*
+$zamanbir = date_create("1980-12-08");//yil ay gun 
+$zamaniki = date_create("1978-07-05");
+
+
+$islem = date_diff($zamanbir, $zamaniki);
+
+$formatlagun = $islem->format("%d");
+$formatlaAy = $islem->format("%m");
+$formatlayil = $islem->format("%y");
+
+$yilhesapla = $formatlayil * 365;
+$ayihesapla = $formatlaAy * 30;
+$gunhesapla = $formatlagun;
+
+$toplamsonuc = $yilhesapla + $ayihesapla + $gunhesapla;
+
+
+echo "08-12-1980 ile 05-07-1978 tarihleri arasindaki gun farki : ". $toplamsonuc ;
+--------------------------*/
+/*
+//ALTTAKI DOGRU KULLANIMDIR.!!!!!!!!!!!!!!!!!!!!!
+$zamanbir = date_create("1980-12-08");//yil ay gun 
+$zamaniki = date_create("1978-07-05");
+
+
+$islem = date_diff($zamanbir, $zamaniki);
+
+$sonuc = "";
+
+foreach ($islem as $anahtar => $icerik ) {
+    if ($anahtar=="days") {
+       $sonuc .= $icerik;
+  
+    }
+}
+echo "08-12-1980 ile 05-07-1978 tarihleri arasindaki gun farki : ". $sonuc ;
+------------------------*/
+
+$zamanbir = date_create("1980-12-08");//yil ay gun 
+$zamaniki = date_create("1978-07-05");
+
+$islem = date_diff($zamanbir,$zamaniki);
+
+$formatla = $islem->format("%R%y YIL %R%m AY %R%d GUN");
+echo "08-12-1980 ile 05-07-1978 tarihleri arasindaki zaman farki : ".$formatla;
+
+
+
+
+
+
+
+
+
+?>
+</body>
+</html>	

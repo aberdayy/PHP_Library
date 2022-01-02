@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="tr-TR">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="content-language" content="tr">
+<meta charset="utf-8">
+<title>baslik</title>
+</head>
+<body>
+<?php 
+/*
+\w  :   duzneli ifade dahilinde kontrol edilecek olan icerigin karakter diziliminde bulunan degerin harf, rakam veya bir alt cizgi _ karakterlerinden herhangi birisi ile eslesmesi gerektigini belirtmek icin kullanilir. 
+\W  :    duzneli ifade dahilinde kontrol edilecek olan icerigin karakter diziliminde bulunan degerin harf, rakam veya bir alt cizgi _ karakterleri disindaki karakterlerden herhangi birisi ile eslesmesi gerektigini belirtmek icin kullanilir. 
+*/
+/*
+$icerik = "merhaba benim adim Ataberk Erday. 1 + 4 * 5 isleminin sonucu 21'dir. _ (alt cizgi karakteri)";
+$desen = "/\w/";
+preg_match_all($desen,$icerik,$sonuc);
+echo "orjinal icerik : " . $icerik . "<br />";
+echo "<pre>";
+print_r($sonuc);
+echo "</pre>";
+------------------------------------*/
+
+$icerik = "merhaba benim adim Ataberk Erday. 1 + 4 * 5 isleminin sonucu 21'dir. _ (alt cizgi karakteri)";
+$desen = "/\W/";
+preg_match_all($desen,$icerik,$sonuc);
+echo "orjinal icerik : " . $icerik . "<br />";
+echo "<pre>";
+print_r($sonuc);
+echo "</pre>";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+?>
+
+</body>
+</html>	

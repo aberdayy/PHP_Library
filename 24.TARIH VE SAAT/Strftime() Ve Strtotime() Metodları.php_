@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="tr-TR">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="content-language" content="tr">
+<meta charset="utf-8">
+<title>baslik</title>
+</head>
+<body>
+<?php 
+/*
+strftime()      :   yerel terih ve saat bilgilerini belirtilecek olan formata gore bicimlendirerek bicimlendirdigi degeri geriye dondurur.
+strtotime()     :   ingilizce metin icerikli bir zamanin unix zaman dengesini bularak buldugu degeri geriyte dondurur.
+*/
+                                                                                                                            /*
+                                                                                                                            setlocale(LC_ALL, "tr_TR");
+                                                                                                                            $zaman =    strftime("%d %B %y %T %A");
+
+                                                                                                                            echo $zaman;
+                                                                                                                            -=------------------------------------*/
+                                                                                                                            /*
+                                                                                                                            $zamandamgasi = mktime(20, 30, 45, 12, 8, 1980);
+                                                                                                                            echo "zaman damgasi degeri : " . $zamandamgasi . "<br />";
+
+                                                                                                                            setlocale(LC_ALL, "tr_TR");
+                                                                                                                            $zaman =    strftime("%d %B %Y %T %A",$zamandamgasi);
+
+                                                                                                                            echo $zaman;
+                                                                                                                            -----------------------------------*/
+                                                                                                                            /*
+                                                                                                                            setlocale(LC_ALL, "tr_TR");
+                                                                                                                            $gun =    strftime("%d.%m.%Y %T %Z");
+
+                                                                                                                            echo $gun;
+                                                                                                                            -------------------------------------*/
+                                                                                                                            /*
+                                                                                                                            $zaman =    strftime("%d.%m.%Y %T %Z");
+                                                                                                                            $islem = iconv("LATIN5", "UTF-8",$zaman);
+
+                                                                                                                            echo $zaman . "<br />" ;
+                                                                                                                            echo $islem;
+                                                                                                                            ----------------------------*/
+                                                                                                                            /*
+                                                                                                                            $islem = iconv("LATIN5", "UTF-8",strftime("%d.%m.%Y %T %Z"));
+                                                                                                                            echo $islem;
+                                                                                                                            --------------------------------------
+                                                                                                                            */
+                                                                                                                            /*
+                                                                                                                            $zaman           =    date("Y-m-d");
+                                                                                                                            $zamandamgasi1   =  strtotime($zaman);
+                                                                                                                            $zamandamgasi2   = strtotime("1 day",$zamandamgasi1);
+
+                                                                                                                            echo "tarih : ".$zaman . "<br />";
+
+                                                                                                                            echo "zaman damgasi 1 : ".$zamandamgasi1 . "<br />";
+
+                                                                                                                            echo "zaman damgasi 2 : ".$zamandamgasi2 . "<br />";
+                                                                                                                            -----------------------*/
+
+                                                                                                                            $zaman = strtotime("now");
+                                                                                                                            $yarin = strtotime("+1 day");
+                                                                                                                            $birhaftasonra = strtotime("+1 week");
+                                                                                                                            $tarih = strtotime("08 december 1980");
+                                                                                                                            $gelismis = strtotime("+1 year +5 month +23 day +3 hour +5 minute");
+                                                                                                                            $dondur = date("d.m.Y H.i.s",$gelismis);
+                                                                                                                            echo "suan : ".$zaman. "<br />";
+                                                                                                                            echo "yarin  : ".$yarin . "<br />";
+                                                                                                                            echo "bir hafta sonra  : ".$birhaftasonra . "<br />";
+                                                                                                                            echo "08.12.1980 : ".$tarih. "<br />";
+                                                                                                                            echo "1 yil  5 ay 23 gun 3 saat ve 5 dakika sonraki zaman damgasi = ".$gelismis. "<br />";
+                                                                                                                            echo "ileri gidilen gelismis degiskenin dondurulmus hali : ".$dondur;
+                                                                                                                            
+?>
+</body>
+</html>	
