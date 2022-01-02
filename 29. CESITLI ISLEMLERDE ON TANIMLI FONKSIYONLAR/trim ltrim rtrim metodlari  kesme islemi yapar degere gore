@@ -1,0 +1,52 @@
+<?php 
+header("Refresh:5")
+?>
+<!doctype html>
+<html lang="tr-TR">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="content-language" content="tr">
+<meta charset="utf-8">
+<title>baslik</title>
+</head>
+<body>
+<?php
+/*
+trim()      :   belirtilecek olan icerigin varsa basindaki ve sonundaki tum bosluklari, sekmeleri ve yeni satir karakterlerini silerek, olusturdugu degeri geriye dondurur. 
+ayrica belirtilecek olan icerigin varsa basindaki ve sonundaki, belirtilecek olan karakterleride silerek olusturdugu degeri geriye dondurur.
+
+ltrim()     :   belirtilecek olan icerigin varsa basindaki / solundaki tum bosluklari, sekmeleri ve yeni satir karakterlerini silerek, olusturdugu degeri geriye dondurur. 
+ayrica belirtilecek olan icerigin varsa basindaki/ solundaki, belirtilecek olan karakterleride silerek olusturdugu degeri geriye dondurur.
+
+rtrim()     :   belirtilecek olan icerigin varsa sonundaki / sagindaki tum bosluklari, sekmeleri ve yeni satir karakterlerini silerek, olusturdugu degeri geriye dondurur. 
+ayrica belirtilecek olan icerigin varsa sonundaki/ sagindaki, belirtilecek olan karakterleride silerek olusturdugu degeri geriye dondurur.
+*/
+/*
+$icerik = "     ataberk                 erday         ";
+echo trim($icerik);
+------------------------------------------------*/
+/*
+
+$icerik = "xxxataberkxxx"; // L ve R trim icinde aynidir.
+echo trim($icerik,"x");                                                                 
+
+------------------------------------------------*/
+/*
+$icerik = "     ataberk                 erday         ";
+echo ltrim($icerik);
+------------------------------------------------*/
+
+$icerik = "     ataberk                 erday         ";
+echo rtrim($icerik);
+
+?>
+<script type="text/javascript" language="javascript">
+alert("<?php echo $icerik;   ?>");
+</script>
+
+
+
+
+
+</body>
+</html>	
