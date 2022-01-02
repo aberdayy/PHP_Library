@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="tr-TR">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="content-language" content="tr">
+<meta charset="utf-8">
+<title>baslik</title>
+</head>
+<body>
+
+<?php 
+
+/*
+next()      =   dizinin gostericisi konumundaki anahtari veya elamani bir ileri almak icin kullanilir.   
+prev()      =   dizinin gostericisi konumundaki anahtari veya elamani bir geri almak icin kullanilir.
+reset()     =   dizinin gostericisi konumundaki anahtari veya elamani varsayilan konuma (ilk) geri dondurmek icin kullanilir.
+*/
+/*
+$isimler    =   array("ataberk", "hakan","murat","sefa","cafer","osman","kadir");
+
+echo "<pre>";
+print_r($isimler);
+echo "</pre>";
+
+$Agostericininanahtari     =   key($isimler);
+echo "gostericini varsayilan gosterici konumunn daki anahtari:" .$Agostericininanahtari . "<br />";
+
+$Agostercininelemani       = current($isimler);  
+echo "gostericini varsayilan gosterici konumunn daki elemani:" .$Agostercininelemani. "<br /><br />";
+
+
+next($isimler);
+$Bgostericininanahtari     =   key($isimler);
+echo "gostericini varsayilan gosterici konumunn daki anahtari:" .$Bgostericininanahtari . "<br />";
+
+$Bgostercininelemani       = current($isimler);  
+echo "gostericini varsayilan gosterici konumunn daki elemani:" .$Bgostercininelemani. "<br /><br />";
+
+next($isimler);
+$Cgostericininanahtari     =   key($isimler);
+echo "gostericini varsayilan gosterici konumunn daki anahtari:" .$Cgostericininanahtari . "<br />";
+
+$Cgostercininelemani       = current($isimler);  
+echo "gostericini varsayilan gosterici konumunn daki elemani:" .$Cgostercininelemani;
+---------------------------------------------------------------------
+*/
+/*
+$isimler    =   array("a1"=>"ataberk","a2"=> "hakan","a3"=>"murat","a4"=>"sefa","a5"=>"cafer","a6"=>"osman","a7"=>"kadir");
+
+echo "<pre>";
+print_r($isimler);
+echo "</pre>";
+
+$Agostericininanahtari     =   key($isimler);
+echo "gostericini varsayilan gosterici konumunn daki anahtari:" .$Agostericininanahtari . "<br />";
+
+$Agostercininelemani       = current($isimler);  
+echo "gostericini varsayilan gosterici konumunn daki elemani:" .$Agostercininelemani. "<br /><br />";
+
+
+next($isimler);
+$Bgostericininanahtari     =   key($isimler);
+echo "gostericini varsayilan gosterici konumunn daki anahtari:" .$Bgostericininanahtari . "<br />";
+
+$Bgostercininelemani       = current($isimler);  
+echo "gostericini varsayilan gosterici konumunn daki elemani:" .$Bgostercininelemani. "<br /><br />";
+
+next($isimler);
+$Cgostericininanahtari     =   key($isimler);
+echo "gostericini varsayilan gosterici konumunn daki anahtari:" .$Cgostericininanahtari . "<br />";
+
+$Cgostercininelemani       = current($isimler);  
+echo "gostericini varsayilan gosterici konumunn daki elemani:" .$Cgostercininelemani;
+----------------------------------------------------------------------------
+*/
+/*
+$isimler    =   array("ataberk", "hakan","murat","sefa","cafer","osman","kadir");
+
+echo "<pre>";
+print_r($isimler);
+echo "</pre>";
+
+$Agostericininanahtari     =   key($isimler);
+echo "gostericini varsayilan gosterici konumunn daki anahtari:" .$Agostericininanahtari . "<br />";
+
+$Agostercininelemani       = current($isimler);  
+echo "gostericini varsayilan gosterici konumunn daki elemani:" .$Agostercininelemani. "<br /><br />";
+
+
+next($isimler);
+$Bgostericininanahtari     =   key($isimler);
+echo "gostericini varsayilan gosterici konumunn daki anahtari:" .$Bgostericininanahtari . "<br />";
+
+$Bgostercininelemani       = current($isimler);  
+echo "gostericini varsayilan gosterici konumunn daki elemani:" .$Bgostercininelemani. "<br /><br />";
+
+next($isimler);
+$Cgostericininanahtari     =   key($isimler);
+echo "gostericini varsayilan gosterici konumunn daki anahtari:" .$Cgostericininanahtari . "<br />";
+
+$Cgostercininelemani       = current($isimler);  
+echo "gostericini varsayilan gosterici konumunn daki elemani:" .$Cgostercininelemani. "<br /><br />";
+
+prev($isimler);
+$Dgostericininanahtari     =   key($isimler);
+echo "gostericini varsayilan gosterici konumunn daki anahtari:" .$Dgostericininanahtari . "<br />";
+
+$Dgostercininelemani       = current($isimler);  
+echo "gostericini varsayilan gosterici konumunn daki elemani:" .$Dgostercininelemani;
+-----------------------------------------------------------------
+*/
+/*
+$isimler    =   array("a1"=>"ataberk","a2"=> "hakan","a3"=>"murat","a4"=>"sefa","a5"=>"cafer","a6"=>"osman","a7"=>"kadir");
+
+echo "<pre>";
+print_r($isimler);
+echo "</pre>";
+
+$Agostericininanahtari     =   key($isimler);
+echo "gostericini varsayilan gosterici konumunn daki anahtari:" .$Agostericininanahtari . "<br />";
+
+$Agostercininelemani       = current($isimler);  
+echo "gostericini varsayilan gosterici konumunn daki elemani:" .$Agostercininelemani. "<br /><br />";
+
+
+next($isimler);
+$Bgostericininanahtari     =   key($isimler);
+echo "gostericini varsayilan gosterici konumunn daki anahtari:" .$Bgostericininanahtari . "<br />";
+
+$Bgostercininelemani       = current($isimler);  
+echo "gostericini varsayilan gosterici konumunn daki elemani:" .$Bgostercininelemani. "<br /><br />";
+
+next($isimler);
+$Cgostericininanahtari     =   key($isimler);
+echo "gostericini varsayilan gosterici konumunn daki anahtari:" .$Cgostericininanahtari . "<br />";
+
+$Cgostercininelemani       = current($isimler);  
+echo "gostericini varsayilan gosterici konumunn daki elemani:" .$Cgostercininelemani. "<br /><br />";
+
+prev($isimler);
+$Dgostericininanahtari     =   key($isimler);
+echo "gostericini varsayilan gosterici konumunn daki anahtari:" .$Dgostericininanahtari . "<br />";
+
+$Dgostercininelemani       = current($isimler);  
+echo "gostericini varsayilan gosterici konumunn daki elemani:" .$Dgostercininelemani;
+------------------------------------------------------------------------
+*/
+/*
+$isimler    =   array("ataberk", "hakan","murat","sefa","cafer","osman","kadir");
+
+echo "<pre>";
+print_r($isimler);
+echo "</pre>";
+
+$Agostericininanahtari     =   key($isimler);
+echo "gostericini varsayilan gosterici konumunn daki anahtari:" .$Agostericininanahtari . "<br />";
+
+$Agostercininelemani       = current($isimler);  
+echo "gostericini varsayilan gosterici konumunn daki elemani:" .$Agostercininelemani. "<br /><br />";
+
+
+next($isimler);
+$Bgostericininanahtari     =   key($isimler);
+echo "gostericini varsayilan gosterici konumunn daki anahtari:" .$Bgostericininanahtari . "<br />";
+
+$Bgostercininelemani       = current($isimler);  
+echo "gostericini varsayilan gosterici konumunn daki elemani:" .$Bgostercininelemani. "<br /><br />";
+
+next($isimler);
+$Cgostericininanahtari     =   key($isimler);
+echo "gostericini varsayilan gosterici konumunn daki anahtari:" .$Cgostericininanahtari . "<br />";
+
+$Cgostercininelemani       = current($isimler);  
+echo "gostericini varsayilan gosterici konumunn daki elemani:" .$Cgostercininelemani. "<br /><br />";
+
+next($isimler);
+$Dgostericininanahtari     =   key($isimler);
+echo "gostericini varsayilan gosterici konumunn daki anahtari:" .$Dgostericininanahtari . "<br />";
+
+$Dgostercininelemani       = current($isimler);  
+echo "gostericini varsayilan gosterici konumunn daki elemani:" .$Dgostercininelemani. "<br /><br />";
+
+next($isimler);
+$Egostericininanahtari     =   key($isimler);
+echo "gostericini varsayilan gosterici konumunn daki anahtari:" .$Egostericininanahtari . "<br />";
+
+$Egostercininelemani       = current($isimler);  
+echo "gostericini varsayilan gosterici konumunn daki elemani:" .$Egostercininelemani. "<br /><br />";
+
+prev($isimler);
+$Fgostericininanahtari     =   key($isimler);
+echo "gostericini varsayilan gosterici konumunn daki anahtari:" .$Fgostericininanahtari . "<br />";
+
+$Fgostercininelemani       = current($isimler);  
+echo "gostericini varsayilan gosterici konumunn daki elemani:" .$Fgostercininelemani. "<br /><br />";
+
+prev($isimler);
+$Ggostericininanahtari     =   key($isimler);
+echo "gostericini varsayilan gosterici konumunn daki anahtari:" .$Ggostericininanahtari . "<br />";
+
+$Ggostercininelemani       = current($isimler);  
+echo "gostericini varsayilan gosterici konumunn daki elemani:" .$Ggostercininelemani. "<br /><br />";
+
+next($isimler);
+$Hgostericininanahtari     =   key($isimler);
+echo "gostericini varsayilan gosterici konumunn daki anahtari:" .$Hgostericininanahtari . "<br />";
+
+$Hgostercininelemani       = current($isimler);  
+echo "gostericini varsayilan gosterici konumunn daki elemani:" .$Hgostercininelemani. "<br /><br />";
+
+reset($isimler);
+$Igostericininanahtari     =   key($isimler);
+echo "gostericini varsayilan gosterici konumunn daki anahtari:" .$Igostericininanahtari . "<br />";
+
+$Igostercininelemani       = current($isimler);  
+echo "gostericini varsayilan gosterici konumunn daki elemani:" .$Igostercininelemani. "<br /><br />";
+----------------------------------------------------------------------------------------------------------------
+*/
+/*
+$isimler    =   array("a1"=>"ataberk","a2"=> "hakan","a3"=>"murat","a4"=>"sefa","a5"=>"cafer","a6"=>"osman","a7"=>"kadir");
+
+
+echo "<pre>";
+print_r($isimler);
+echo "</pre>";
+
+$Agostericininanahtari     =   key($isimler);
+echo "gostericini varsayilan gosterici konumunn daki anahtari:" .$Agostericininanahtari . "<br />";
+
+$Agostercininelemani       = current($isimler);  
+echo "gostericini varsayilan gosterici konumunn daki elemani:" .$Agostercininelemani. "<br /><br />";
+
+
+next($isimler);
+$Bgostericininanahtari     =   key($isimler);
+echo "gostericini varsayilan gosterici konumunn daki anahtari:" .$Bgostericininanahtari . "<br />";
+
+$Bgostercininelemani       = current($isimler);  
+echo "gostericini varsayilan gosterici konumunn daki elemani:" .$Bgostercininelemani. "<br /><br />";
+
+next($isimler);
+$Cgostericininanahtari     =   key($isimler);
+echo "gostericini varsayilan gosterici konumunn daki anahtari:" .$Cgostericininanahtari . "<br />";
+
+$Cgostercininelemani       = current($isimler);  
+echo "gostericini varsayilan gosterici konumunn daki elemani:" .$Cgostercininelemani. "<br /><br />";
+
+next($isimler);
+$Dgostericininanahtari     =   key($isimler);
+echo "gostericini varsayilan gosterici konumunn daki anahtari:" .$Dgostericininanahtari . "<br />";
+
+$Dgostercininelemani       = current($isimler);  
+echo "gostericini varsayilan gosterici konumunn daki elemani:" .$Dgostercininelemani. "<br /><br />";
+
+next($isimler);
+$Egostericininanahtari     =   key($isimler);
+echo "gostericini varsayilan gosterici konumunn daki anahtari:" .$Egostericininanahtari . "<br />";
+
+$Egostercininelemani       = current($isimler);  
+echo "gostericini varsayilan gosterici konumunn daki elemani:" .$Egostercininelemani. "<br /><br />";
+
+prev($isimler);
+$Fgostericininanahtari     =   key($isimler);
+echo "gostericini varsayilan gosterici konumunn daki anahtari:" .$Fgostericininanahtari . "<br />";
+
+$Fgostercininelemani       = current($isimler);  
+echo "gostericini varsayilan gosterici konumunn daki elemani:" .$Fgostercininelemani. "<br /><br />";
+
+prev($isimler);
+$Ggostericininanahtari     =   key($isimler);
+echo "gostericini varsayilan gosterici konumunn daki anahtari:" .$Ggostericininanahtari . "<br />";
+
+$Ggostercininelemani       = current($isimler);  
+echo "gostericini varsayilan gosterici konumunn daki elemani:" .$Ggostercininelemani. "<br /><br />";
+
+next($isimler);
+$Hgostericininanahtari     =   key($isimler);
+echo "gostericini varsayilan gosterici konumunn daki anahtari:" .$Hgostericininanahtari . "<br />";
+
+$Hgostercininelemani       = current($isimler);  
+echo "gostericini varsayilan gosterici konumunn daki elemani:" .$Hgostercininelemani. "<br /><br />";
+
+reset($isimler);
+$Igostericininanahtari     =   key($isimler);
+echo "gostericini varsayilan gosterici konumunn daki anahtari:" .$Igostericininanahtari . "<br />";
+
+$Igostercininelemani       = current($isimler);  
+echo "gostericini varsayilan gosterici konumunn daki elemani:" .$Igostercininelemani. "<br /><br />";
+------------------------------------------------------------
+*/
+$isimler    =   array("ataberk", "hakan",array("hale","sule","asli","gizem","irem"),"murat","sefa","cafer","osman","kadir");
+
+
+
+echo "<pre>";
+print_r($isimler);
+echo "</pre>";
+
+$Agostericininanahtari     =   key($isimler[2]);
+echo "gostericini varsayilan gosterici konumunn daki anahtari:" .$Agostericininanahtari . "<br />";
+
+$Agostercininelemani       = current($isimler[2]);  
+echo "gostericini varsayilan gosterici konumunn daki elemani:" .$Agostercininelemani. "<br /><br />";
+
+
+next($isimler[2]);
+$Bgostericininanahtari     =   key($isimler[2]);
+echo "gostericini varsayilan gosterici konumunn daki anahtari:" .$Bgostericininanahtari . "<br />";
+
+$Bgostercininelemani       = current($isimler[2]);  
+echo "gostericini varsayilan gosterici konumunn daki elemani:" .$Bgostercininelemani. "<br /><br />";
+
+next($isimler[2]);
+$Cgostericininanahtari     =   key($isimler[2]);
+echo "gostericini varsayilan gosterici konumunn daki anahtari:" .$Cgostericininanahtari . "<br />";
+
+$Cgostercininelemani       = current($isimler[2]);  
+echo "gostericini varsayilan gosterici konumunn daki elemani:" .$Cgostercininelemani. "<br /><br />";
+
+next($isimler[2]);
+$Dgostericininanahtari     =   key($isimler[2]);
+echo "gostericini varsayilan gosterici konumunn daki anahtari:" .$Dgostericininanahtari . "<br />";
+
+$Dgostercininelemani       = current($isimler[2]);  
+echo "gostericini varsayilan gosterici konumunn daki elemani:" .$Dgostercininelemani. "<br /><br />";
+
+next($isimler[2]);
+$Egostericininanahtari     =   key($isimler[2]);
+echo "gostericini varsayilan gosterici konumunn daki anahtari:" .$Egostericininanahtari . "<br />";
+
+$Egostercininelemani       = current($isimler[2]);  
+echo "gostericini varsayilan gosterici konumunn daki elemani:" .$Egostercininelemani. "<br /><br />";
+
+prev($isimler[2]);
+$Fgostericininanahtari     =   key($isimler[2]);
+echo "gostericini varsayilan gosterici konumunn daki anahtari:" .$Fgostericininanahtari . "<br />";
+
+$Fgostercininelemani       = current($isimler[2]);  
+echo "gostericini varsayilan gosterici konumunn daki elemani:" .$Fgostercininelemani. "<br /><br />";
+
+prev($isimler[2]);
+$Ggostericininanahtari     =   key($isimler[2]);
+echo "gostericini varsayilan gosterici konumunn daki anahtari:" .$Ggostericininanahtari . "<br />";
+
+$Ggostercininelemani       = current($isimler[2]);  
+echo "gostericini varsayilan gosterici konumunn daki elemani:" .$Ggostercininelemani. "<br /><br />";
+
+next($isimler[2]);
+$Hgostericininanahtari     =   key($isimler[2]);
+echo "gostericini varsayilan gosterici konumunn daki anahtari:" .$Hgostericininanahtari . "<br />";
+
+$Hgostercininelemani       = current($isimler[2]);  
+echo "gostericini varsayilan gosterici konumunn daki elemani:" .$Hgostercininelemani. "<br /><br />";
+
+reset($isimler);
+$Igostericininanahtari     =   key($isimler);
+echo "gostericini varsayilan gosterici konumunn daki anahtari:" .$Igostericininanahtari . "<br />";
+
+$Igostercininelemani       = current($isimler);  
+echo "gostericini varsayilan gosterici konumunn daki elemani:" .$Igostercininelemani. "<br /><br />";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+?>
+
+
+</body>
+</html>	

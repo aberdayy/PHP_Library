@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="tr-TR">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="content-language" content="tr">
+<meta charset="utf-8">
+<title>baslik</title>
+</head>
+<body>
+
+<?php 
+/*
+implode()   :   diziyi birlestirerek duz bir metin ierigi olusturmak icin kullanilir.
+*/
+
+/*
+$isimler    =   array("ataberk","furkan","hakan","serkan");
+
+echo "<pre>";
+print_r($isimler);
+echo "</pre><br />";
+
+$sonuc  =   implode($isimler);
+
+echo $sonuc;
+-----------------------------------------------
+*/
+
+/*
+$isimler    =   array("ataberk","furkan","hakan","serkan");
+
+echo "<pre>";
+print_r($isimler);
+echo "</pre><br />";
+
+$sonuc  =   implode(" ",$isimler); //tirnak icinde isaret araya ne koyacagini gosteririr.
+
+echo $sonuc;
+------------------------------------------------------------------------
+*/
+
+/*
+$isimler    =   array("ataberk","furkan","hakan","serkan");
+
+echo "<pre>";
+print_r($isimler);
+echo "</pre><br />";
+
+$sonuc  =   implode(", ",$isimler); //tirnak icinde isaret araya ne koyacagini gosteririr.
+
+echo $sonuc;
+---------------------------------------------------------------
+*/
+
+
+$isimler    =   array("ataberk","sadik","esra","lacin","roka", "");//bos icerik son icerigide eklemesi icin gereklidir.
+
+echo "<pre>";
+print_r($isimler);
+echo "</pre><br />";
+
+$sonuc  =   implode(" erday<br />",$isimler); //tirnak icinde isaret araya ne koyacagini gosteririr.
+
+echo $sonuc;
+
+
+
+
+
+
+
+?>
+
+
+</body>
+</html>	

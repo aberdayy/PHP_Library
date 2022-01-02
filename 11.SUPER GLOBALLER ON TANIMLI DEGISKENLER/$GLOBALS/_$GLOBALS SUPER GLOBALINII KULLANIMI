@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="tr-TR">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="content-language" content="tr">
+<meta charset="utf-8">
+<title>baslik</title>
+</head>
+
+<body>
+<?php 
+
+/* 
+-----------------LOCAL ALANDAN GLOBAL ALANA ULASIM-------------------------
+$GLOBALS :  atanacak olan degisken icin kapsama alanlarinin 
+degistirilmesini saglar. Busayede global alanda tanimlanmis bir 
+degiskenene local alandan, local alanda tanimlanmis bir degiskene global alandan ulasabilme imkani ssaglar.
+*/
+/*
+function deneme (){
+
+    //$isim = "ataberk erday";
+
+    $GLOBALS["isim"] = "ataberk erday"; 
+}
+deneme();
+echo $isim;
+   ------------------------  YADA -------------------------------
+
+   function deneme (){
+    $GLOBALS["isim"] = "ataberk erday"; 
+}
+deneme();
+
+echo $GLOBALS["isim"];
+--------------GLOBAL ALANDAN LOCAL ALANA ULASIM-----------       
+
+$GLOBALS ["isim"] = "ataberk erday";
+
+function deneme(){
+
+    echo $GLOBALS ["isim"];
+}
+deneme ();
+---------------------- YADA ------------------
+
+$isim = "ataberk erday";
+
+function deneme(){
+
+    echo $GLOBALS ["isim"];
+}
+deneme ();
+*/
+
+
+
+?>
+
+</body>
+</html>	
