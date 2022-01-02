@@ -1,0 +1,163 @@
+<?php
+// header("Refresh:5")
+?>
+<!doctype html>
+<html lang="tr-TR">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="content-language" content="tr">
+<meta charset="utf-8">
+<title>baslik</title>
+</head>
+<body>
+<?php
+/*
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, "https://www.pbase.com/photos/random.html");
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+$sonuc = curl_exec($ch);
+curl_close($ch);
+//echo $sonuc;
+preg_match_all('/src="(.*?)" /', $sonuc, $degerler);
+
+$temizdizi = array_unique($degerler[1]);
+
+// echo "<pre>";
+// print_r($temizdizi);
+// echo "</pre>";
+foreach ($temizdizi as $icerik) {
+    $uzantibul = substr($icerik,-4);
+    if (($uzantibul=="jpeg") or ($uzantibul==".jpg") or ($uzantibul==".png") or ($uzantibul=="bmp") or ($uzantibul==".gif")) {
+        echo "<img src='".$icerik. "'> <br />";
+
+        }
+
+}
+-------------------------------------------------------*/
+/*
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, "https://www.pbase.com/photos/random.html");
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+$sonuc = curl_exec($ch);
+curl_close($ch);
+//echo $sonuc;
+preg_match_all('/src="(.*?)" /', $sonuc, $degerler);
+
+$temizdizi = array_unique($degerler[1]);
+
+// echo "<pre>";
+// print_r($temizdizi);
+// echo "</pre>";
+foreach ($temizdizi as $icerik) {
+    $uzantibul = substr($icerik,-4);
+    if (($uzantibul=="jpeg") or ($uzantibul==".jpg") or ($uzantibul==".png") or ($uzantibul==".bmp") or ($uzantibul==".gif")) {
+        // echo "<img src='".$icerik. "'> <br />";
+        
+        $parcala = explode("/",$icerik);
+        // echo "<pre>";
+        // print_r($parcala);
+        // echo "</pre>";
+        $parcalason = end($parcala);//dizilerin son elemanini yakalar
+        echo $parcalason . "<br />";
+        
+        $yenidenuzantibul   =   substr($parcalason,-4);
+        if ($yenidenuzantibul=="jpeg") {
+            $dosyaadicinuzanti = ".".$yenidenuzantibul;
+        }else {
+            $dosyaadicinuzanti = $yenidenuzantibul;
+        }
+        $isimlendirme = md5(uniqid(mt_rand()));
+        $dosyaadiolustur = $isimlendirme. $dosyaadicinuzanti;
+        
+        $dosya = file_get_contents($icerik);
+        if ($dosya) {
+            file_put_contents($dosyaadiolustur, $dosya);
+        }
+    }
+    
+}
+------------------------------------------------------*/
+/*
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, "https://www.arabam.com/ikinci-el/otomobil");
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+$sonuc = curl_exec($ch);
+curl_close($ch);
+//echo $sonuc;
+preg_match_all('/src="(.*?)" /', $sonuc, $degerler);
+
+$temizdizi = array_unique($degerler[1]);
+// echo "<pre>";
+// print_r($temizdizi);
+// echo "</pre>";
+foreach ($temizdizi as $icerik) {
+    $uzantibul = substr($icerik,-4);
+    if (($uzantibul=="jpeg") or ($uzantibul==".jpg") or ($uzantibul==".png") or ($uzantibul==".bmp") or ($uzantibul==".gif")) {
+        // echo "<img src='".$icerik. "'> <br />";
+        
+        $parcala = explode("/",$icerik);
+        // echo "<pre>";
+        // print_r($parcala);
+        // echo "</pre>";
+        $parcalason = end($parcala);//dizilerin son elemanini yakalar
+        echo $parcalason . "<br />";
+        
+        $yenidenuzantibul   =   substr($parcalason,-4);
+        if ($yenidenuzantibul=="jpeg") {
+            $dosyaadicinuzanti = ".".$yenidenuzantibul;
+        }else {
+            $dosyaadicinuzanti = $yenidenuzantibul;
+        }
+        $isimlendirme = md5(uniqid(mt_rand()));
+        $dosyaadiolustur = $isimlendirme. $dosyaadicinuzanti;
+        
+        $dosya = file_get_contents($icerik);
+        if ($dosya) {
+            file_put_contents($dosyaadiolustur, $dosya);
+        }
+    }
+    
+}
+------------------------------------------------------*/
+$Oturum		=	curl_init();
+curl_setopt($Oturum, CURLOPT_URL, "https://www.sahibinden.com/ferrari?pagingSize=50&sorting=yil-nu_desc");
+curl_setopt($Oturum, CURLOPT_RETURNTRANSFER, true);
+$Sonuc		=	curl_exec($Oturum);
+curl_close($Oturum);
+// echo $Sonuc;
+preg_match_all('/<img src="(.*?)"\/>/', $Sonuc, $Degerler);
+preg_match_all('/<a href="(.*?)\/detay">/', $Sonuc, $DegerlerLink);
+
+/* echo "<pre>";
+print_r($Degerler[1]);
+print_r($DegerlerLink[1]);
+echo "</pre>"; */
+
+$Sira	=	0;
+
+foreach($Degerler[1] as $Icerik){
+    // echo $Icerik . "<br />";
+    $Parcala	=	explode("\"", $Icerik);
+    /* echo "<pre>";
+    print_r($Parcala);
+    echo "</pre>"; */
+    if(isset($Parcala[4])){
+        echo "<a href='https://www.sahibinden.com" . $DegerlerLink[1][$Sira] ."/detay' target='_blank'>" . $Parcala[4] . "</a><br />";
+        echo "<a href='https://www.sahibinden.com" . $DegerlerLink[1][$Sira] ."/detay' target='_blank'><img src='" . $Parcala[0] . "'></a><br /><br />";
+    }
+    $Sira++;
+}
+
+
+
+
+
+
+
+
+
+
+
+?>
+</body>
+</html>	
