@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="tr-TR">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="content-language" content="tr">
+<meta charset="utf-8">
+<title>baslik</title>
+</head>
+<body>
+<?php
+
+/*
+stat()              :   belirtilecek olan deger dogrultusunda ilgili kaynagin dosya hakkindaki tum bilgilerini bularak buldugu degerlerden yeni bir dizi olusturarak olusturdugu degeri geriye dondurur.
+fstat()             :   fopen() metodu kullanilarak acilmis olan ve belirtilecek olan deger dogrultusunda, ilgili kaynagin dosya hakkindaki tum  bilgilerini kullanarak buldugu degerlerden yeni bir dizi olusturarak olusturdugu degeri geriye dondurur.
+clearstatcache()    :   stat () veya fstat metodu kullanilarak elde edilen ve on belege alinan verileri temizlemek icin kullanilir.
+
+
+stat() ve fstat degerleri;
+    0       ve         dev         =>   aygit numarasi
+    1       ve         ino         =>   dosya dugum numarasi
+    2       ve         mode        =>   dosya erisim izinleri
+    3       ve         nlink       =>   dosya baglanti sayisi
+    4       ve         uid         =>   dosya sahibbi id'si
+    5       ve         gid         =>   dosya sahibbi grubu id'si
+    6       ve         rdev        =>   dosya dugum aygitlari icin aygit turu
+    7       ve         size        =>   dosya boyutu(byte)
+    8       ve         atime       =>   dosya son erisim zamani(unix)
+    9       ve         mtime       =>   dosya degistirilme zamani(unix)
+    10      ve         ctime       =>   dosya olsuturulma zamani(unix)
+    11      ve         blksize     =>   dosya sistemi icin I/O blok boyutu    
+    12      ve         blocks      =>   dosya icin ayrilmis 512 bytelik blok boyutu    
+
+  
+*/
+/*
+$yol = "index2.php";
+$islem = stat($yol);
+echo "<pre>";
+print_r($islem);
+echo "</pre>";
+cleatstatcache();
+-------------------------*/
+
+$yol     = "index2.php";
+$dosyac  = fopen($yol, "r");
+$islem   = fstat($dosyac);
+
+echo "<pre>";
+print_r($islem);
+echo "</pre>";
+cleatstatcache();
+
+
+
+
+
+?>
+</body>
+</html>	

@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="tr-TR">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="content-language" content="tr">
+<meta charset="utf-8">
+<title>baslik</title>
+</head>
+<body>
+<?php
+/*
+filetype()      :   belirtilecek olan dogrultusunda ilgili kayngain dosya mi yoksa dizin mi oldugunu bularak buldugu degeri geriye dondurur.
+fileowner()     :   belirtilecek olan dogrultusunda ilgili kayngain dosya sahibi degerini bularak degeri geriye dondurur.
+filegroup()     :   belirtilecek olan dogrultusunda ilgili kayngain dosya sahibi gurubu degerini bularak degeri geriye dondurur.     
+fileinode()     :   belirtilecek olan dogrultusunda ilgili kayngain dosya dugum numarasi degerini bularak degeri geriye dondurur.
+fileperms()     :   belirtilecek olan dogrultusunda ilgili kayngain dosya erisim izni degerini bularak degeri geriye dondurur.
+filesize()      :   belirtilecek olan dogrultusunda ilgili kayngain dosya boyutu degerini bularak buldugu degeri geriye dondurur.(byte)
+filectime()     :   belirtilecek olan dogrultusunda ilgili kayngain unix zaman damgasi turunde dosya olusturulma tarihi degerini bularak, buldugu degeri geriye dondurur.
+filemtime()     :   belirtilecek olan dogrultusunda ilgili kayngain unix zaman damgasi turunde dosya degistirilme tarihi degerini bularak, buldugu degeri geriye dondurur.
+fileatime()     :   belirtilecek olan dogrultusunda ilgili kayngain unix zaman damgasi turunde dosya son erisim tarihi degerini bularak, buldugu degeri geriye dondurur.
+*/
+/*
+$yol = "index2.php";
+$dosya = filetype($yol);
+
+echo $yol . " icerigi bir : " . $dosya;
+--------------------------------*/
+/*
+$yol = "resimler";
+$dosya = filetype($yol);
+
+echo $yol . " icerigi bir : " . $dosya;
+---------------------------------*/
+/*
+$yol = "index2.php";
+$dosya = fileowner($yol);
+
+echo $yol . " sahibi : " . $dosya;
+-------------------------*/
+/*
+$yol = "index2.php";
+$dosya = filegroup($yol);
+
+echo $yol . " sahibinin gurubu : " . $dosya;
+------------------------*/
+/*
+$yol = "index2.php";
+$dosya = fileinode($yol);
+
+echo $yol . " sahibinin gurubu : " . $dosya;
+----------------------------*/
+/*
+$yol = "index2.php";
+$dosya = fileperms($yol);
+
+echo $yol . " erisim izni: " . $dosya;
+-------------------------*/
+/*
+$yol = "index2.php";
+$dosya = filesize($yol);
+
+echo $yol . " dosya boyutu  :  " . $dosya;
+---------------------------------*/
+/*
+$yol = "index2.php";
+$dosya = filectime($yol);
+
+echo $yol . " olusturulma tarihi   :  " . $dosya . "<br />";
+
+echo $yol . " olusturulma tarihi   :  " . date("d.m.Y H.i.s" ,$dosya);
+-------------------------------*/
+/*
+$yol = "index2.php";
+$dosya = filemtime($yol);
+
+echo $yol . " olusturulma tarihi   :  " . $dosya . "<br />";
+
+echo $yol . " olusturulma tarihi   :  " . date("d.m.Y H.i.s" ,$dosya);
+-----------------------------------*/
+
+$yol = "index2.php";
+$dosya = fileatime($yol);
+
+echo $yol . " olusturulma tarihi   :  " . $dosya . "<br />";
+
+echo $yol . " olusturulma tarihi   :  " . date("d.m.Y H.i.s" ,$dosya);
+
+
+
+
+
+
+
+
+?>
+</body>
+</html>	
